@@ -1,0 +1,11 @@
+spring:
+  data:
+    rest:
+      basePath: /api
+  datasource:
+    url: jdbc:mysql://${DB_PORT_3306_TCP_ADDR}:${DB_PORT_3306_TCP_PORT}/${DB_ENV_MYSQL_DATABASE}
+    username: ${DB_ENV_MYSQL_USER}
+    password: ${DB_ENV_MYSQL_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: update
