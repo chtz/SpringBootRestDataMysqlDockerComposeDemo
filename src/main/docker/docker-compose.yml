@@ -1,0 +1,22 @@
+version: '2'
+services:
+  app:
+    build: .
+    ports:
+     - "8080:8080"
+    links:
+     - db
+    environment:
+     - DB_PORT_3306_TCP_ADDR=db
+     - DB_PORT_3306_TCP_PORT=3306
+     - DB_ENV_MYSQL_DATABASE=db
+     - DB_ENV_MYSQL_USER=root
+     - DB_ENV_MYSQL_PASSWORD=s3cret
+  db:
+    container_name: db
+    image: mysql:latest
+    environment:
+     - MYSQL_ROOT_PASSWORD=s3cret
+     - MYSQL_DATABASE=db
+     - MYSQL_USER=user
+     - MYSQL_PASSWORD=pazz
