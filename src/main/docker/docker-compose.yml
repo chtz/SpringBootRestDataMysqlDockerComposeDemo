@@ -1,7 +1,9 @@
 version: '2'
 services:
   app:
-    build: .
+    build:
+      context: ./../../..
+      dockerfile: src/main/docker/Dockerfile
     ports:
      - "8080:8080"
     links:
@@ -14,7 +16,7 @@ services:
      - DB_ENV_MYSQL_PASSWORD=s3cret
   db:
     container_name: db
-    image: mysql:latest
+    image: mysql:5.7
     environment:
      - MYSQL_ROOT_PASSWORD=s3cret
      - MYSQL_DATABASE=db
