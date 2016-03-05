@@ -7,5 +7,5 @@ Spring-Boot + RepositoryRestResource + MySQL + Docker-Compose => Rest API in 5 M
 ```
 mvn clean install
 (cd src/main/docker/ && docker-compose up)
-(cd src/main/docker/ && docker-compose up)
+./doc/samples.sh 
 ```
