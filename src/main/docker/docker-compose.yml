@@ -14,6 +14,7 @@ services:
      - DB_ENV_MYSQL_DATABASE=db
      - DB_ENV_MYSQL_USER=root
      - DB_ENV_MYSQL_PASSWORD=s3cret
+     - API_USER_PASSWORD=verySecret!
   db:
     image: mysql:5.7
     environment:

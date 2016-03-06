@@ -9,3 +9,6 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+security:
+  user:
+    password: ${API_USER_PASSWORD}
