@@ -5,7 +5,7 @@ Spring-Boot + RepositoryRestResource + MySQL + Docker-Compose + Alpine Linux => 
 # Quickstart
 
 ```
-mvn clean install
-(cd src/main/docker/ && docker-compose start)
-./doc/samples.sh 
+cd scripts/
+./run-app.sh &
+./invoke-app.sh
 ```
